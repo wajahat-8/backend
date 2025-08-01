@@ -11,7 +11,8 @@
     "dev": "node --watch index.js",
     "test": "echo \\\"Error: no test specified\\\" && exit 1",
     "build:ui": "rm -rf dist && cd ../full-stack-open/frontend && npm run build && cp -r dist ../../backend",
-    "deploy:full": "npm run build:ui && git add . && git commit -m uibuild && git push"
+    "deploy:full": "npm run build:ui && git add . && git commit -m uibuild && git push",
+    "lint": "eslint ."
   },
   "dependencies": {
     "cors": "^2.8.5",
@@ -19,5 +20,12 @@
     "express": "^5.1.0",
     "mongoos": "^0.0.1-security",
     "mongoose": "^8.16.3"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.32.0",
+    "@stylistic/eslint-plugin-js": "^4.4.1",
+    "eslint": "^9.32.0",
+    "eslint-plugin-react": "^7.37.5",
+    "globals": "^16.3.0"
   }
 }
